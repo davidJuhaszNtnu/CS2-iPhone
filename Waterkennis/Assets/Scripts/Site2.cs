@@ -81,6 +81,7 @@ public class Site2 : MonoBehaviour
         if(Screen.orientation == ScreenOrientation.Portrait)
             orientation = "portrait";
         else orientation = "landscape";
+        Debug.Log(orientation);
         site2UI.GetComponent<Site2UI>().setImages(pipe_order, membrane_order, tank_order, orientation);
     }
     
@@ -128,21 +129,21 @@ public class Site2 : MonoBehaviour
 
         // pipe.transform.position = arCamera.transform.position + (new Vector3(dist*(float)Math.Cos(angle), 0.5f, dist*(float)Math.Sin(angle))) + new Vector3(0f, -0f, 0f);
         Vector3 component_pos = Quaternion.Euler(0, angle, 0) * position_vec * dist;
-        pipe.transform.position = arCamera.transform.position + new Vector3(component_pos.x, -0.3f, component_pos.z);
+        pipe.transform.position = arCamera.transform.position + new Vector3(component_pos.x, -0.2f, component_pos.z);
         pipe.name = "pipe";
         pipe.AddComponent<ARAnchor>();
 
         angle = Random.Range(-60, 60);
         dist = Random.Range(1.5f, maxDistance);
         component_pos = Quaternion.Euler(0, angle, 0) * position_vec * dist;
-        membrane.transform.position = arCamera.transform.position + new Vector3(component_pos.x, -0.3f, component_pos.z);
+        membrane.transform.position = arCamera.transform.position + new Vector3(component_pos.x, -0.2f, component_pos.z);
         membrane.name = "membrane";
         membrane.AddComponent<ARAnchor>();
 
         angle = Random.Range(-60, 60);
         dist = Random.Range(1.5f, maxDistance);
         component_pos = Quaternion.Euler(0, angle, 0) * position_vec * dist;
-        tank.transform.position = arCamera.transform.position + new Vector3(component_pos.x, -0.3f, component_pos.z);
+        tank.transform.position = arCamera.transform.position + new Vector3(component_pos.x, -0.2f, component_pos.z);
         tank.name = "tank";
         tank.AddComponent<ARAnchor>();
 

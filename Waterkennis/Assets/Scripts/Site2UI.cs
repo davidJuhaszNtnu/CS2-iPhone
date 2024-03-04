@@ -78,9 +78,20 @@ public class Site2UI : MonoBehaviour
         correct_order[1] = 2;
         correct_order[2] = 3;
 
-        Screen.autorotateToLandscapeLeft = false;
-        Screen.autorotateToLandscapeRight = false;
-        Screen.autorotateToPortrait = false;
+        if(screen == "portrait"){
+            Screen.autorotateToLandscapeLeft = false;
+            Screen.autorotateToLandscapeRight = false;
+            Screen.autorotateToPortrait = true;
+            Screen.autorotateToPortraitUpsideDown = false;
+        }
+        if(screen == "landscape"){
+            Screen.autorotateToLandscapeLeft = true;
+            Screen.autorotateToLandscapeRight = true;
+            Screen.autorotateToPortrait = false;
+            Screen.autorotateToPortraitUpsideDown = false;
+        }
+        
+        // Screen.orientation = ScreenOrientation.AutoRotation;
 
         orientation = screen;
         if(orientation == "portrait"){
@@ -117,6 +128,7 @@ public class Site2UI : MonoBehaviour
         Screen.autorotateToLandscapeLeft = true;
         Screen.autorotateToLandscapeRight = true;
         Screen.autorotateToPortrait = true;
+        Screen.autorotateToPortraitUpsideDown = true;
         float oldScore = (float)gameController.GetComponent<gameController>().score;
 
         if(order[0] == correct_order[0] && order[1] == correct_order[1] && order[2] == correct_order[2]){

@@ -23,10 +23,10 @@ public class Site3 : MonoBehaviour
     public bool alreadyInstantiated;
     
     GameObject pipe, broken_pipe;
-    GameObject valve, infoBubbleCanvas, clickToOpenCanvas;
-    bool start_search, waitForValveClick, valveRotating;
+    GameObject valve, clickToOpenCanvas;
+    bool start_search, waitForValveClick, valveRotating, waitForInfoBubble;
     public bool mazeInteractionOn;
-    float timeValveRotation;
+    float timeRobotDance;
     
     //maze
     int[,] mazePlan;
@@ -132,10 +132,9 @@ public class Site3 : MonoBehaviour
         valve = pipe.transform.GetChild(1).gameObject;
         clickToOpenCanvas = pipe.transform.GetChild(0).gameObject;
         clickToOpenCanvas.SetActive(false);
-        infoBubbleCanvas = air.transform.GetChild(0).GetChild(0).gameObject;
-        infoBubbleCanvas.SetActive(false);
         start_search = false;
         waitForValveClick = false;
+        waitForInfoBubble = false;
         valveRotating = false;
         mazeInteractionOn = false;
         foundLeak = false;
@@ -161,7 +160,7 @@ public class Site3 : MonoBehaviour
         air.transform.position = arCamera.transform.position + new Vector3(component_pos.x, -0.4f, component_pos.z);
         // air.transform.position = pipe.transform.position;
         if(alreadyInstantiated)
-            air.transform.localScale = air.transform.localScale/0.8f;
+            air.transform.localScale = air.transform.localScale/0.45f;
 
         // score update 1
         answered = new bool[5];
@@ -217,7 +216,6 @@ public class Site3 : MonoBehaviour
         // gained components
         gameController.GetComponent<gameController>().updateStatus(0, true, false);
 
-        infoBubbleCanvas.SetActive(false);
         infoBubblePanel.SetActive(false);
         taskPanel.SetActive(true);
 
@@ -226,16 +224,6 @@ public class Site3 : MonoBehaviour
             orientation = "portrait";
         else orientation = "landscape";
         site3UI.GetComponent<Site3UI>().setImages(2, 1, 3, orientation);
-    }
-
-    public void switchInfoBubblesWorld_bttn(){
-        infoBubbleCanvas.SetActive(false);
-        infoBubblePanel.SetActive(true);
-    }
-
-    public void switchInfoBubblesScreen_bttn(){
-        infoBubbleCanvas.SetActive(true);
-        infoBubblePanel.SetActive(false);
     }
 
     public void ok_warningPanel_bttn(){
@@ -648,10 +636,11 @@ public class Site3 : MonoBehaviour
                     if(Physics.Raycast(ray, out hit)){
                         if(hit.collider.tag == "air"){
                             start_search = false;
+                            timeRobotDance = Time.time;
+                            waitForInfoBubble = true;
                             distanceWarningPanel.SetActive(false);
                             tapOnObjectPanel.SetActive(false);
                             air.GetComponent<Animator>().SetTrigger("dance");
-                            infoBubbleCanvas.SetActive(true);
                             Vector3 dir = arCamera.transform.position - air.transform.position;
                             // air.transform.rotation = Quaternion.LookRotation(new Vector3(dir.x,0f,dir.z), Vector3.up)*Quaternion.Euler(0,-16f,0);
                             air.transform.rotation = Quaternion.LookRotation(new Vector3(dir.x,0f,dir.z), Vector3.up);
@@ -663,6 +652,12 @@ public class Site3 : MonoBehaviour
                 tapOnObjectPanel.SetActive(false);
             }
         }
+        //wait 10 sec for a robot to dance
+        if(waitForInfoBubble && Time.time > timeRobotDance + 10f){
+            infoBubblePanel.SetActive(true);
+            waitForInfoBubble = false;
+        }
+
         if(waitForValveClick){
             ray = arCamera.ScreenPointToRay(Input.mousePosition);
             if(Input.GetMouseButtonDown(0)){
@@ -841,7 +836,7 @@ public class Site3 : MonoBehaviour
         airPosition = mazePosition + new Vector3(-1.5f*cubeSide, -0.235f, cubeSide);
         air.transform.position = airPosition;
         followCamera.transform.GetChild(0).rotation = airRotation * Quaternion.Euler(90f, 0f, -90f);
-        air.transform.localScale = air.transform.localScale*0.8f;
+        air.transform.localScale = air.transform.localScale*0.45f;
         // airRotation = Quaternion.LookRotation(new Vector3(arCamera.transform.forward.x,0f,arCamera.transform.forward.z), Vector3.up)*Quaternion.Euler(0,-16f,0);
         airRotation = Quaternion.LookRotation(new Vector3(arCamera.transform.forward.x,0f,arCamera.transform.forward.z), Vector3.up);
         air.transform.rotation=airRotation;

@@ -67,8 +67,8 @@ public class LanguageChanger : MonoBehaviour
     public TextMeshProUGUI _L_site3_tapOnObjectPanel;
     public TextMeshProUGUI _P_site3_tapOnObjectPanel;
     //info bubble panel
-    public TextMeshProUGUI _L_site3_infoBubblePanel;
-    public TextMeshProUGUI _P_site3_infoBubblePanel;
+    public TextMeshProUGUI _L_site3_infoBubblePanel1, _L_site3_infoBubblePanel2, _L_site3_infoBubblePanel3;
+    public TextMeshProUGUI _P_site3_infoBubblePanel1, _P_site3_infoBubblePanel2, _P_site3_infoBubblePanel3;
     //info bubble world
     public TextMeshProUGUI _site3_infoBubbleWorldPanel1, _site3_infoBubbleWorldPanel2, _site3_infoBubbleWorldPanel3, _site3_infoBubbleWorldPanel4;
     //task panel
@@ -334,13 +334,12 @@ public class LanguageChanger : MonoBehaviour
             _L_site3_tapOnObjectPanel.text = "Tik op de robot.";
             _P_site3_tapOnObjectPanel.text = _L_site3_tapOnObjectPanel.text;
             //info bubble panel
-            _L_site3_infoBubblePanel.text = "Hallo, mijn naam is AIR. Ik ben verantwoordelijk voor de gezondheid van het leidingnetwerk.\n\nOmdat je mij gevonden hebt, beloon ik je met 3 onderdelen voor dit deel van het watersysteem \n•	Pomp\n•      Leiding\n•         Kraan\n\nIn je volgende opdracht moet je deze onderdelen in de juiste volgorde zetten om gezuiverd drinkwater van de opslagtank op locatie 1 (waterbron) naar je huis te brengen.\n\nVeel succes!";
-            _P_site3_infoBubblePanel.text = _L_site3_infoBubblePanel.text;
-            //info bubble world
-            _site3_infoBubbleWorldPanel1.text = "Hallo, mijn naam is AIR. Ik ben verantwoordelijk voor de gezondheid van het leidingnetwerk.";
-            _site3_infoBubbleWorldPanel2.text = "Omdat je mij gevonden hebt, beloon ik je met 3 onderdelen voor dit deel van het watersysteem \n•	Pomp\n•      Leiding\n•         Kraan";
-            _site3_infoBubbleWorldPanel3.text = "In je volgende opdracht moet je deze onderdelen in de juiste volgorde zetten om gezuiverd drinkwater van de opslagtank op locatie 1 (waterbron) naar je huis te brengen.";
-            _site3_infoBubbleWorldPanel4.text = "Veel succes!";
+            _L_site3_infoBubblePanel1.text = "Hallo, mijn naam is AIR. Ik ben verantwoordelijk voor de gezondheid van het leidingnetwerk.\nOmdat je mij gevonden hebt, beloon ik je met 3 onderdelen voor dit deel van het watersysteem";
+            _L_site3_infoBubblePanel2.text = "•\tPomp\n•\tLeiding\n•\tKraan";
+            _L_site3_infoBubblePanel3.text = "In je volgende opdracht moet je deze onderdelen in de juiste volgorde zetten om gezuiverd drinkwater van de opslagtank op locatie 1 (waterbron) naar je huis te brengen.\nVeel succes!";
+            _P_site3_infoBubblePanel1.text = _L_site3_infoBubblePanel1.text;
+            _P_site3_infoBubblePanel2.text = _L_site3_infoBubblePanel2.text;
+            _P_site3_infoBubblePanel3.text = "In je volgende opdracht moet je deze onderdelen in de juiste volgorde zetten om gezuiverd drinkwater van de opslagtank op locatie 1 (waterbron) naar je huis te brengen.\n\nVeel succes!";
             //task panel
             _L_site3_taskPanel1.text = "Zet de onderdelen voor dit deel van het watersysteem in de juiste volgorde om drinkwater naar je huis te brengen. Je kunt de onderdelen verplaatsen door ze te verslepen.";
             _P_site3_taskPanel1.text = _L_site3_taskPanel1.text;
@@ -494,7 +493,7 @@ public class LanguageChanger : MonoBehaviour
             //welcome panel 1
             _L_site4_welcomePanel11.text = "Welkom bij de afvalwaterzuiveringsinstallatie!";
             _P_site4_welcomePanel11.text = _L_site4_welcomePanel11.text;
-            _L_site4_welcomePanel12.text = "Nadat je het drinkwater in je huis hebt gebruikt, brengen rioolbuizen het afvalwater (gebruikt water) naar een zuiveringsinstallatie. In Nederland zijn de gemeente en het waterschap samen verantwoordelijk voor het opvangen en zuiveren van het afvalwater. De gemeente zorgt voor het riool (inzameling en transport), de waterschappen zorgen voor het zuiveren.";
+            _L_site4_welcomePanel12.text = "Nadat je het drinkwater in je huis hebt gebruikt, brengen rioolbuizen het afvalwater (gebruikt water) naar een zuiveringsinstallatie.\n\nIn Nederland zijn de gemeente en het waterschap samen verantwoordelijk voor het opvangen en zuiveren van het afvalwater. De gemeente zorgt voor het riool (inzameling en transport), de waterschappen zorgen voor het zuiveren.";
             _P_site4_welcomePanel12.text = _L_site4_welcomePanel12.text;
             //welcome panel 2
             _L_site4_welcomePanel21.text = "Welkom bij de afvalwaterzuiveringsinstallatie!";
@@ -612,8 +611,8 @@ public class LanguageChanger : MonoBehaviour
             _P_site5_endPanel1.text = "• Spel afsluiten";
             _L_site5_endPanel2.text = "•\tOpnieuw spelen";
             _P_site5_endPanel2.text = "• Opnieuw spelen";
-            _L_site5_endPanel3.text = "•\tLink naar KWR pagina: \n\n<link=\"ID\">https://www.kwrwater.nl/onderzoek/sustainability-water-cycle/</link>";
-            _P_site5_endPanel3.text = "• Link naar KWR pagina: \n\n<link=\"ID\">https://www.kwrwater.nl/onderzoek/sustainability-water-cycle/</link>";
+            _L_site5_endPanel3.text = "•\tLink naar KWR pagina: \n\n<link=\"ID\">https://www.kwrwater.nl/projecten/water-kennis-een-meeslepende-media-ervaring/</link>";
+            _P_site5_endPanel3.text = "• Link naar KWR pagina: \n\n<link=\"ID\">https://www.kwrwater.nl/projecten/water-kennis-een-meeslepende-media-ervaring/</link>";
         }
     }
 
@@ -671,14 +670,14 @@ public class LanguageChanger : MonoBehaviour
             _P_site1_welcomePanel11.text = _L_site1_welcomePanel11.text;
             _L_site1_welcomePanel12.text = "Turn on your tap, shower or flush your toilet and clean water flows out. But where does this water come from?\n\nThe availability of enough clean water has become a societal issue all over the world. At KWR, we work on finding the best way to manage the water system, with sustainability and circularity as a priority.\n\nThrough a number of challenges, you will learn about the different stages of the water system that brings water to your home.";
             _P_site1_welcomePanel12.text = _L_site1_welcomePanel12.text;
-            _L_site1_welcomePanel13.text = "ULTIMATE is a four-year European Union (EU) funded project in the context of the circular economy (CE) programme, which aims to create economic value and increase sustainability by giving value to resources from wastewater within a dynamic socio-economic and business oriented industrial ecosystem. Find out more about the project here: ultimatewater.eu";
+            _L_site1_welcomePanel13.text = "This app was developed was part of ULTIMATE. This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement N° 869318. More on ultimatewater.eu";
             _P_site1_welcomePanel13.text = _L_site1_welcomePanel13.text;
             //welcome panel 2
             _L_site1_welcomePanel21.text = "Welcome to Water-kennis, an immersive media experience!";
             _P_site1_welcomePanel21.text = _L_site1_welcomePanel21.text;
             _L_site1_welcomePanel22.text = "The rules are simple. You will start with a drinking water budget of 120 litres (the average daily water consumption of a person in the Netherlands). If you complete a challenge with mistakes, you will lose a part of your drinking water budget.\n\nAfter completing the game, you will be asked to make choices in your water use based on your remaining drinking water budget.";
             _P_site1_welcomePanel22.text = _L_site1_welcomePanel22.text;
-            _L_site1_welcomePanel23.text = "ULTIMATE is a four-year European Union (EU) funded project in the context of the circular economy (CE) programme, which aims to create economic value and increase sustainability by giving value to resources from wastewater within a dynamic socio-economic and business oriented industrial ecosystem. Find out more about the project here: ultimatewater.eu";
+            _L_site1_welcomePanel23.text = "This app was developed was part of ULTIMATE. This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement N° 869318. More on ultimatewater.eu";
             _P_site1_welcomePanel23.text = _L_site1_welcomePanel23.text;
             //multichoice panel
             _L_site1_multichoicePanel1.text = "Where is drinking water in the Netherlands coming from?";
@@ -726,7 +725,7 @@ public class LanguageChanger : MonoBehaviour
             //welcome panel
             _L_site2_welcomePanel1.text = "Welcome to the water source!";
             _P_site2_welcomePanel1.text = _L_site2_welcomePanel1.text;
-            _L_site2_welcomePanel2.text = "The first step in making drinking water is the water source.\n\nWe have hidden 3 components needed to make drinking water around the well. The components are located in a 2,5 meter  radius. Collect all 3 components. In order to collect a component, you need to tap on the 3D image. \n\nGood luck!\n\n";
+            _L_site2_welcomePanel2.text = "The first step in making drinking water is the water source.\n\nWe have hidden 3 components needed to make drinking water around the water source. The components are located in a 2.5 meter  radius. Collect all 3 components. In order to collect a component, you need to tap on the 3D image. \n\nGood luck!\n\n";
             _P_site2_welcomePanel2.text = _L_site2_welcomePanel2.text;
             //find panel
             _L_site2_findPanel1.text = "Collected:";
@@ -782,7 +781,7 @@ public class LanguageChanger : MonoBehaviour
             //welcome panel
             _L_site3_welcomePanel1.text = "Welcome to the pipe network!";
             _P_site3_welcomePanel1.text = _L_site3_welcomePanel1.text;
-            _L_site3_welcomePanel2.text = "Did you know that the Netherlands has a drinking water supply pipe network of 120,000 km? This is long enough to go around the earth 3 times! These pipes are necessary to bring the drinking water to the clients (for example to your home).\n\nYour next challenge is to find AIR (the Autonomous Inspection Robot). AIR is a robot that lives in the distribution pipes and is equipped with sensors to measure the condition of the pipe network.\n\nAIR is located somewhere in a 2,5  meter radius. When you find AIR, tap on the robot.\n\nGood luck!";
+            _L_site3_welcomePanel2.text = "Did you know that the Netherlands has a drinking water supply pipe network of 120,000 km? This is long enough to go around the earth 3 times! These pipes are necessary to bring the drinking water to the clients (for example to your home).\n\nYour next challenge is to find AIR (the Autonomous Inspection Robot). AIR is a robot that lives in the distribution pipes and is equipped with sensors to measure the condition of the pipe network.\n\nAIR is located somewhere in a 2.5  meter radius. When you find AIR, tap on the robot.\n\nGood luck!";
             _P_site3_welcomePanel2.text = _L_site3_welcomePanel2.text;
             //distance warning panel
             _L_site3_distanceWarningPanel.text = "You are too far away!";
@@ -791,13 +790,12 @@ public class LanguageChanger : MonoBehaviour
             _L_site3_tapOnObjectPanel.text = "Tap on the robot.";
             _P_site3_tapOnObjectPanel.text = _L_site3_tapOnObjectPanel.text;
             //info bubble panel
-            _L_site3_infoBubblePanel.text = "Hi, my name is AIR. I am responsible for the well-being of the pipe network.\n\nFor finding me, I would like to reward you with the following 3 components for this part of the water system \n•	Pump\n•	   Pipe\n•	    Tap\n\nIn your next challenge, you will need to put these components in the correct order to help get the drinking water to your home.\n\nGood luck!";
-            _P_site3_infoBubblePanel.text = _L_site3_infoBubblePanel.text;
-            //info bubble world
-            _site3_infoBubbleWorldPanel1.text = "Hi, my name is AIR. I am responsible for the well-being of the pipe network.";
-            _site3_infoBubbleWorldPanel2.text = "For finding me, I would like to reward you with the following 3 components for this part of the water system \n•	Pump\n•	  Pipe\n•	   Tap";
-            _site3_infoBubbleWorldPanel3.text = "In your next challenge, you will need to put these components in the correct order to help get the drinking water to your home.";
-            _site3_infoBubbleWorldPanel4.text = "Good luck!";
+            _L_site3_infoBubblePanel1.text = "Hi, my name is AIR. I am responsible for the well-being of the pipe network.\nFor finding me, I would like to reward you with the following 3 components for this part of the water system";
+            _L_site3_infoBubblePanel2.text = "•\tPump\n•\tPump\n•\tTap";
+            _L_site3_infoBubblePanel3.text = "In your next challenge, you will need to put these components in the correct order to help get the drinking water to your home.\nGood luck!";
+            _P_site3_infoBubblePanel1.text = _L_site3_infoBubblePanel1.text;
+            _P_site3_infoBubblePanel2.text = _L_site3_infoBubblePanel2.text;
+            _P_site3_infoBubblePanel3.text = "In your next challenge, you will need to put these components in the correct order to help get the drinking water to your home.\n\nGood luck!";
             //task panel
             _L_site3_taskPanel1.text = "Put the components for this part of the water system in the correct order to bring drinking water to your home. You can move components by dragging.";
             _P_site3_taskPanel1.text = _L_site3_taskPanel1.text;
@@ -952,13 +950,13 @@ public class LanguageChanger : MonoBehaviour
             //welcome panel 1
             _L_site4_welcomePanel11.text = "Welcome to the wastewater treatment plant!";
             _P_site4_welcomePanel11.text = _L_site4_welcomePanel11.text;
-            _L_site4_welcomePanel12.text = "After you have used the drinking water in your home, sewer pipes bring the wastewater (used water) to a treatment plant. In the Netherlands the municipality and the water boards share the responsibility of managing the wastewater. The municipality takes care of collection and transportation, while the water boards take care of the purification (treatment).";
+            _L_site4_welcomePanel12.text = "After you have used the drinking water in your home, sewer pipes bring the wastewater (used water) to a treatment plant.\n\nIn the Netherlands the municipality and the water boards share the responsibility of managing the wastewater. The municipality takes care of collection and transportation, while the water boards take care of the purification (treatment).";
             _P_site4_welcomePanel12.text = _L_site4_welcomePanel12.text;
             //welcome panel 2
             _L_site4_welcomePanel21.text = "Welcome to the wastewater treatment plant!";
             _P_site4_welcomePanel21.text = _L_site4_welcomePanel21.text;
-            _L_site4_welcomePanel22.text = "Wastewater can be treated with multiple benefits.\nIn the next challenge, you will be presented with a number of statements on the benefit of treated wastewater. Identify which statements are true or false. For each incorrect answer you lose 5 litres of water.\n\nGood luck!";
-            _P_site4_welcomePanel22.text = "Wastewater can be treated with multiple benefits.\n\n\nIn the next challenge, you will be presented with a number of statements on the benefit of treated wastewater. Identify which statements are true or false. For each incorrect answer you lose 5 litres of water.\n\n\nGood luck!";
+            _L_site4_welcomePanel22.text = "Wastewater can be treated with multiple benefits.\n\nIn the next challenge, you will be presented with a number of statements on the benefits of treated wastewater. Identify which statements are true or false. For each incorrect answer you lose 5 litres of water.\n\nGood luck!";
+            _P_site4_welcomePanel22.text = "Wastewater can be treated with multiple benefits.\n\n\nIn the next challenge, you will be presented with a number of statements on the benefits of treated wastewater. Identify which statements are true or false. For each incorrect answer you lose 5 litres of water.\n\n\nGood luck!";
             //statement panel
             site4.GetComponent<Site4>().changeLanguage();
             //after statements panel
@@ -1071,8 +1069,8 @@ public class LanguageChanger : MonoBehaviour
             _P_site5_endPanel1.text = "• Exit the app";
             _L_site5_endPanel2.text = "•\tReplay the game";
             _P_site5_endPanel2.text = "• Replay the game";
-            _L_site5_endPanel3.text = "•\tLink to KWR page: \n\n<link=\"ID\">https://www.kwrwater.nl/onderzoek/sustainability-water-cycle/</link>";
-            _P_site5_endPanel3.text = "• Link to KWR page: \n\n<link=\"ID\">https://www.kwrwater.nl/onderzoek/sustainability-water-cycle/</link>";
+            _L_site5_endPanel3.text = "•\tLink to KWR page: \n\n<link=\"ID\">https://www.kwrwater.nl/en/projecten/water-kennis-an-immersive-media-experience/</link>";
+            _P_site5_endPanel3.text = "• Link to KWR page: \n\n<link=\"ID\">https://www.kwrwater.nl/en/projecten/water-kennis-an-immersive-media-experience/</link>";
         }
     }
 }
