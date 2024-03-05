@@ -160,7 +160,7 @@ public class Site3 : MonoBehaviour
         air.transform.position = arCamera.transform.position + new Vector3(component_pos.x, -0.4f, component_pos.z);
         // air.transform.position = pipe.transform.position;
         if(alreadyInstantiated)
-            air.transform.localScale = air.transform.localScale/0.45f;
+            air.transform.localScale = air.transform.localScale/0.55f;
 
         // score update 1
         answered = new bool[5];
@@ -836,7 +836,7 @@ public class Site3 : MonoBehaviour
         airPosition = mazePosition + new Vector3(-1.5f*cubeSide, -0.235f, cubeSide);
         air.transform.position = airPosition;
         followCamera.transform.GetChild(0).rotation = airRotation * Quaternion.Euler(90f, 0f, -90f);
-        air.transform.localScale = air.transform.localScale*0.45f;
+        air.transform.localScale = air.transform.localScale*0.55f;
         // airRotation = Quaternion.LookRotation(new Vector3(arCamera.transform.forward.x,0f,arCamera.transform.forward.z), Vector3.up)*Quaternion.Euler(0,-16f,0);
         airRotation = Quaternion.LookRotation(new Vector3(arCamera.transform.forward.x,0f,arCamera.transform.forward.z), Vector3.up);
         air.transform.rotation=airRotation;
