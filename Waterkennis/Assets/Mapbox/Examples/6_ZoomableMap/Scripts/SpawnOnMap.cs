@@ -33,6 +33,10 @@
 		[Geocode]
 		string[] path4PointsStrings;
 		Vector3[] path4_points;
+		[SerializeField]
+		[Geocode]
+		string[] path1_1PointsStrings;
+		Vector3[] path1_1_points;
 
 		[SerializeField]
 		float _spawnScale = 100f;
@@ -61,6 +65,7 @@
 			path2_points = new Vector3[path2PointsStrings.Length];
 			path3_points = new Vector3[path3PointsStrings.Length];
 			path4_points = new Vector3[path4PointsStrings.Length];
+			path1_1_points = new Vector3[path1_1PointsStrings.Length];
 
 			spawnedPaths = new List<GameObject>();
 			_spawnedObjects = new List<GameObject>();
@@ -78,7 +83,7 @@
 			}
 
 			//paths
-			for(int i=0;i<4;i++){
+			for(int i=0;i<5;i++){
 				var path=Instantiate(pathPrefab);
 				path.transform.SetParent(app.transform,true);
 				path.SetActive(false);
@@ -109,6 +114,12 @@
 				Vector2d path_point = Conversions.StringToLatLon(locationString);
 				path4_points[i] = _map.GeoToWorldPosition(path_point, true)+(new Vector3(0f,1f,0f));
 			}
+			for (int i = 0; i < path1_1PointsStrings.Length; i++)
+			{
+				var locationString = path1_1PointsStrings[i];
+				Vector2d path_point = Conversions.StringToLatLon(locationString);
+				path1_1_points[i] = _map.GeoToWorldPosition(path_point, true)+(new Vector3(0f,1f,0f));
+			}
 			LineRenderer lr = spawnedPaths[0].GetComponent<LineRenderer>();
 			lr.positionCount=path1PointsStrings.Length;
 			lr.numCornerVertices=10;
@@ -126,6 +137,11 @@
 
 			lr = spawnedPaths[3].GetComponent<LineRenderer>();
 			lr.positionCount=path4PointsStrings.Length;
+			lr.numCornerVertices=10;
+			lr.numCapVertices=10;
+
+			lr = spawnedPaths[4].GetComponent<LineRenderer>();
+			lr.positionCount=path1_1PointsStrings.Length;
 			lr.numCornerVertices=10;
 			lr.numCapVertices=10;
 
@@ -182,6 +198,12 @@
 					Vector2d path_point = Conversions.StringToLatLon(locationString);
 					path4_points[i] = _map.GeoToWorldPosition(path_point, true)+(new Vector3(0f,1f,0f));
 				}
+				for (int i = 0; i < path1_1PointsStrings.Length; i++)
+				{
+					var locationString = path1_1PointsStrings[i];
+					Vector2d path_point = Conversions.StringToLatLon(locationString);
+					path1_1_points[i] = _map.GeoToWorldPosition(path_point, true)+(new Vector3(0f,1f,0f));
+				}
 				LineRenderer lr = spawnedPaths[0].GetComponent<LineRenderer>();
 				lr.positionCount=path1PointsStrings.Length;
 				lr.numCornerVertices=10;
@@ -205,6 +227,12 @@
 				lr.numCornerVertices=10;
 				lr.numCapVertices=10;
 				lr.SetPositions(path4_points);
+
+				lr = spawnedPaths[4].GetComponent<LineRenderer>();
+				lr.positionCount=path1_1PointsStrings.Length;
+				lr.numCornerVertices=10;
+				lr.numCapVertices=10;
+				lr.SetPositions(path1_1_points);
 			}else objectsSpawned=true;
 			if(_spawnedObjects[currentSite].activeSelf && objectsSpawned){
 				_spawnedObjects[currentSite].transform.Rotate(Vector3.up, rotationSpeed*Time.deltaTime);

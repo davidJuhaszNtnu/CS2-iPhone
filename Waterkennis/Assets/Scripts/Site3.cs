@@ -157,7 +157,7 @@ public class Site3 : MonoBehaviour
         pipe.transform.rotation = Quaternion.LookRotation(new Vector3(dir.x,0f,dir.z), Vector3.up)*Quaternion.Euler(0f, -90f, 0f);
         
         Vector3 component_pos = Quaternion.Euler(0, angle, 0) * position_vec * dist;
-        air.transform.position = arCamera.transform.position + new Vector3(component_pos.x, -0.4f, component_pos.z);
+        air.transform.position = arCamera.transform.position + new Vector3(component_pos.x, -0.6f, component_pos.z);
         // air.transform.position = pipe.transform.position;
         if(alreadyInstantiated)
             air.transform.localScale = air.transform.localScale/0.55f;

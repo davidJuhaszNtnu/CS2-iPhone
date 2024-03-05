@@ -71,6 +71,7 @@ public class App : MonoBehaviour
         // site5.GetComponent<Site5>().startSite();
         // nextSite_index = 5;
         // gameController.GetComponent<gameController>().currentSite_index = 4;
+        // sitePathSpawner.GetComponent<SpawnOnMap>().currentSite = 3;
     }
 
 

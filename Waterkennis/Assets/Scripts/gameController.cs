@@ -14,9 +14,11 @@ public class gameController : MonoBehaviour
     public GameObject app;
     public TMP_Dropdown dropdown;
     public int currentSite_index;
+    public bool replaying;
 
     void Start()
     {
+        replaying = false;
         scoreLost = new int[5];
         restart();
         if(app.GetComponent<App>().nextSite_index != 1 && app.GetComponent<App>().nextSite_index != 5){

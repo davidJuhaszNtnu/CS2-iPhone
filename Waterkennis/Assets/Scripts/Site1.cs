@@ -8,7 +8,7 @@ using TMPro;
 
 public class Site1 : MonoBehaviour
 {
-    public GameObject site1, site1UI, welcomePanel, welcomePanel2, multichoicePanel, scoreUpdatePanel, answerPanel, site2, site2UI, app;
+    public GameObject site1, site1UI, welcomePanel, welcomePanel2, multichoicePanel, scoreUpdatePanel, answerPanel, site2, site2UI, app, gameController;
     public Camera arCamera, mapCamera;
     public TMP_Dropdown dropdown;
 
@@ -64,7 +64,9 @@ public class Site1 : MonoBehaviour
 
         app.GetComponent<App>().help_button.gameObject.SetActive(true);
         app.GetComponent<App>().player.SetActive(true);
-        app.GetComponent<App>().sitePathSpawner.GetComponent<SpawnOnMap>().currentSite = 0;
+        if(gameController.GetComponent<gameController>().replaying)
+            app.GetComponent<App>().sitePathSpawner.GetComponent<SpawnOnMap>().currentSite = 4;
+        else app.GetComponent<App>().sitePathSpawner.GetComponent<SpawnOnMap>().currentSite = 0;
         app.GetComponent<App>().nextSite_index = 2;
         app.GetComponent<App>().siteOn = false;
         app.GetComponent<App>().sitePathSpawner.GetComponent<SpawnOnMap>().showSitePath();

@@ -49666,6 +49666,7 @@ MonoBehaviour:
   - 52.019297, 5.109221
   - 52.019451, 5.107272
   - 52.018288, 5.107272
+  - 52.018299, 5.108147
   path1PointsStrings:
   - 52.01854501283317, 5.108456153478399
   - 52.018442030327755, 5.108431362299396
@@ -49695,6 +49696,11 @@ MonoBehaviour:
   - 52.018502341408954, 5.106794800706785
   - 52.01845777383404, 5.107237365163465
   - 52.018288, 5.107272
+  path1_1PointsStrings:
+  - 52.018288, 5.107272
+  - 52.01845777383404, 5.107237365163465
+  - 52.018459, 5.108133
+  - 52.018299, 5.108147
   _spawnScale: 10
   _markerPrefab: {fileID: 2677778268155234391, guid: 318fdeed4e280f6428c4f22c82a19fcd, type: 3}
   pathPrefab: {fileID: 4116750027505466996, guid: 0bbbc3aa7ea79f9409e961a977599c76, type: 3}
@@ -55879,7 +55885,7 @@ MonoBehaviour:
   - {fileID: 995631820}
   arCamera: {fileID: 433357808}
   mapCamera: {fileID: 8030623}
-  showDistance: 0.75
+  showDistance: 1
   maxDistance: 3
   dropdown: {fileID: 796525305}
   LanguageChanger: {fileID: 1782335234}
@@ -76519,6 +76525,7 @@ MonoBehaviour:
   app: {fileID: 1318719390}
   dropdown: {fileID: 796525305}
   currentSite_index: 0
+  replaying: 0
 --- !u!1 &1448399635
 GameObject:
   m_ObjectHideFlags: 0
@@ -91073,6 +91080,7 @@ MonoBehaviour:
   site2: {fileID: 1042781676}
   site2UI: {fileID: 1794154048}
   app: {fileID: 1318719390}
+  gameController: {fileID: 1444612994}
   arCamera: {fileID: 433357808}
   mapCamera: {fileID: 8030623}
   dropdown: {fileID: 796525305}
@@ -115047,7 +115055,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094528993850011}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -115741,7 +115749,7 @@ MonoBehaviour:
   gameController: {fileID: 1444612994}
   tapOnObjectPanel: {fileID: 65284393}
   infoBubblePanel: {fileID: 788384280}
-  showDistance: 0.75
+  showDistance: 1
   maxDistance: 3
   alreadyInstantiated: 0
   mazeInteractionOn: 0
