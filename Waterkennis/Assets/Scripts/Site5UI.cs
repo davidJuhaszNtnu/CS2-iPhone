@@ -205,6 +205,9 @@ public class Site5UI : MonoBehaviour
     }
 
     public void replay_bttn(){
+        // toggles
+        foreach(GameObject toggle in toggles)
+            toggle.GetComponent<Toggle>().isOn = false;
         gameController.GetComponent<gameController>().restart();
         gameController.GetComponent<gameController>().replaying = true;
         markerHandler.GetComponent<MarkerHandler>().restart();
@@ -221,9 +224,6 @@ public class Site5UI : MonoBehaviour
         }else languageChanger.GetComponent<LanguageChanger>().changetoDutch();
         welcomePanel.SetActive(true);
         multichoicePanel.SetActive(false);
-        // toggles
-        foreach(GameObject toggle in toggles)
-            toggle.GetComponent<Toggle>().isOn = false;
     }
 
     public void exit_bttn(){
