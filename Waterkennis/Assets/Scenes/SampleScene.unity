@@ -1264,14 +1264,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8030620}
-  m_LocalRotation: {x: 0, y: 0.9063079, z: -0.42261827, w: 0}
-  m_LocalPosition: {x: 0, y: 35, z: 26}
+  m_LocalRotation: {x: 0.29883623, y: -0.64085644, z: 0.29883623, w: 0.64085644}
+  m_LocalPosition: {x: 26, y: 35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4886151258490141}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -90, z: 0}
 --- !u!114 &8030625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49668,8 +49668,7 @@ MonoBehaviour:
   - 52.018288, 5.107272
   - 52.018299, 5.108147
   path1PointsStrings:
-  - 52.01854501283317, 5.108456153478399
-  - 52.018442030327755, 5.108431362299396
+  - 52.01843307895992, 5.108662032747511
   - 52.018459, 5.108133
   - 52.018299, 5.108147
   path2PointsStrings:
@@ -115302,7 +115301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _options:
     locationOptions:
-      latitudeLongitude: 52.0185450128332, 5.1084561534784
+      latitudeLongitude: 52.01843307895992, 5.108662032747511
       zoom: 17
     extentOptions:
       extentType: 1
@@ -115528,7 +115527,7 @@ MonoBehaviour:
   _updateInterval: 1
   _sendEvent: 0
   _latitudeLongitude:
-  - 52.01854501283317, 5.108456153478399
+  - 52.01843307895992, 5.108662032747511
   _heading: 112
 --- !u!114 &114668954659405931
 MonoBehaviour:

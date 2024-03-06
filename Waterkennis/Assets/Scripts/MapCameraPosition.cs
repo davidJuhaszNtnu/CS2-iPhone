@@ -18,7 +18,7 @@ public class MapCameraPosition : MonoBehaviour
         currentDistance = Vector3.Magnitude(player.transform.position - transform.position);
         minDistance = 3f;
         maxDistance = 50.0f;
-        height = transform.position.y - Mathf.Abs(transform.position.z) / Mathf.Tan(Mathf.PI / 2f - (transform.localRotation.eulerAngles.x / 180f * Mathf.PI));
+        height = transform.position.y - Mathf.Abs(transform.position.x) / Mathf.Tan(Mathf.PI / 2f - (transform.localRotation.eulerAngles.x / 180f * Mathf.PI));
         currentDirection = Vector3.Normalize(new Vector3(player.transform.position.x, height, player.transform.position.z) - transform.position);
         currentDistance = Vector3.Magnitude(new Vector3(player.transform.position.x, height, player.transform.position.z) - transform.position);
     }
