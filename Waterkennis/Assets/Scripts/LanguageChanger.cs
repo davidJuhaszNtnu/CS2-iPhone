@@ -791,7 +791,7 @@ public class LanguageChanger : MonoBehaviour
             _P_site3_tapOnObjectPanel.text = _L_site3_tapOnObjectPanel.text;
             //info bubble panel
             _L_site3_infoBubblePanel1.text = "Hi, my name is AIR. I am responsible for the well-being of the pipe network.\nFor finding me, I would like to reward you with the following 3 components for this part of the water system";
-            _L_site3_infoBubblePanel2.text = "•\tPump\n•\tPump\n•\tTap";
+            _L_site3_infoBubblePanel2.text = "•\tPump\n•\tPipe\n•\tTap";
             _L_site3_infoBubblePanel3.text = "In your next challenge, you will need to put these components in the correct order to help get the drinking water to your home.\nGood luck!";
             _P_site3_infoBubblePanel1.text = _L_site3_infoBubblePanel1.text;
             _P_site3_infoBubblePanel2.text = _L_site3_infoBubblePanel2.text;
