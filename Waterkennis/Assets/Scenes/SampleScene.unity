@@ -42689,7 +42689,7 @@ MonoBehaviour:
   m_Placeholder: {fileID: 0}
   m_ItemText: {fileID: 2080597243}
   m_ItemImage: {fileID: 0}
-  m_Value: 0
+  m_Value: 1
   m_Options:
     m_Options:
     - m_Text: EN
@@ -68502,7 +68502,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: EN
+  m_text: NL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5e62e46b634d24742b30f56e85fe3562, type: 2}
   m_sharedMaterial: {fileID: -6791396950401084242, guid: 5e62e46b634d24742b30f56e85fe3562, type: 2}
@@ -91080,6 +91080,7 @@ MonoBehaviour:
   site2UI: {fileID: 1794154048}
   app: {fileID: 1318719390}
   gameController: {fileID: 1444612994}
+  languageChanger: {fileID: 1782335234}
   arCamera: {fileID: 433357808}
   mapCamera: {fileID: 8030623}
   dropdown: {fileID: 796525305}

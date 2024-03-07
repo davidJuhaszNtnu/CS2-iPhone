@@ -8,7 +8,7 @@ using TMPro;
 
 public class Site1 : MonoBehaviour
 {
-    public GameObject site1, site1UI, welcomePanel, welcomePanel2, multichoicePanel, scoreUpdatePanel, answerPanel, site2, site2UI, app, gameController;
+    public GameObject site1, site1UI, welcomePanel, welcomePanel2, multichoicePanel, scoreUpdatePanel, answerPanel, site2, site2UI, app, gameController, languageChanger;
     public Camera arCamera, mapCamera;
     public TMP_Dropdown dropdown;
 
@@ -31,6 +31,7 @@ public class Site1 : MonoBehaviour
         multichoicePanel.SetActive(false);
         scoreUpdatePanel.SetActive(false);
         answerPanel.SetActive(false);
+        languageChanger.GetComponent<LanguageChanger>().changeLanguage(1);
 
         for (int i = 0; i < site1UI.GetComponent<Site1UI>().answered.Length; i++)
             site1UI.GetComponent<Site1UI>().answered[i] = false;
