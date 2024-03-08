@@ -224,7 +224,7 @@ public class LanguageChanger : MonoBehaviour
             _L_site1_welcomePanel23.text = "Deze app is ontwikkeld in het ULTIMATE project, dat financiële ondersteuning ontvangt uit de European Unie’s Horizon 2020 research and innovation programma onder contract no. 869318. Meer op ultimatewater.eu";
             _P_site1_welcomePanel23.text = _L_site1_welcomePanel23.text;
             //multichoice panel
-            _L_site1_multichoicePanel1.text = "Waar komt drinkwater in Nederland vandaan?";
+            _L_site1_multichoicePanel1.text = "Waar komt drinkwater in Nederland vandaan? (kies 1 of meerdere antwoorden)";
             _P_site1_multichoicePanel1.text = _L_site1_multichoicePanel1.text;
             _L_site1_multichoicePanel2.text = "Regenwater";
             _P_site1_multichoicePanel2.text = _L_site1_multichoicePanel2.text;
@@ -429,7 +429,7 @@ public class LanguageChanger : MonoBehaviour
             _L_site3_infoToMultichoicePanel27.text = "Wist je dat je thuis water kunt besparen met een paar eenvoudige waterbesparende maatregelen? Dit kan helpen om te besparen op het gebruik en de kosten van water EN energie.";
             _P_site3_infoToMultichoicePanel27.text = _L_site3_infoToMultichoicePanel27.text;
             //multichoice panel 1
-            _L_site3_multichoicePanel11.text = "Selecteer welke waterbesparende maatregelen bij jou thuis kunnen worden gebruikt om het gebruik van drinkwater te verminderen.";
+            _L_site3_multichoicePanel11.text = "Selecteer welke waterbesparende maatregelen bij jou thuis kunnen worden gebruikt om het gebruik van drinkwater te verminderen. (kies 1 of meerdere antwoorden)";
             _P_site3_multichoicePanel11.text = _L_site3_multichoicePanel11.text;
             _L_site3_multichoicePanel12.text = "Regenwater opvangen en gebruiken om planten in de tuin water te geven";
             _P_site3_multichoicePanel12.text = _L_site3_multichoicePanel12.text;
@@ -459,7 +459,7 @@ public class LanguageChanger : MonoBehaviour
             _L_site3_scoreUpdatePanel13.text = "Je huidige score is:\n" + gameController.GetComponent<gameController>().score.ToString() + " liter.";
             _P_site3_scoreUpdatePanel13.text = _L_site3_scoreUpdatePanel13.text;
             //multichoice panel 2
-            _L_site3_multichoicePanel21.text = "Het gebruikte drinkwater (bijv. om te douchen, toiletten door te spoelen) verdwijnt het in het riool. Vanaf dat moment is het afvalwater. Wat gebeurt er met dit afvalwater?";
+            _L_site3_multichoicePanel21.text = "Het gebruikte drinkwater (bijv. om te douchen, toiletten door te spoelen) verdwijnt het in het riool. Vanaf dat moment is het afvalwater. Wat gebeurt er met dit afvalwater? (kies 1 of meerdere antwoorden)";
             _P_site3_multichoicePanel21.text = _L_site3_multichoicePanel21.text;
             _L_site3_multichoicePanel22.text = "Wordt rechtstreeks in het milieu geloosd";
             _P_site3_multichoicePanel22.text = _L_site3_multichoicePanel22.text;
@@ -544,7 +544,7 @@ public class LanguageChanger : MonoBehaviour
             _L_site5_welcomePanel2.text = "In de vorige challenge heb je geleerd hoe afvalwater, nadat het gezuiverd is, weer terug in het milieu kan worden gebracht. Het is belangrijk dat het afvalwater wordt gezuiverd voordat het weer in het milieu terechtkomt. Dit wordt gedaan om te voorkomen dat verontreinigende stoffen in het milieu terechtkomen. ";
             _P_site5_welcomePanel2.text = _L_site5_welcomePanel2.text;
             //multichoice panel
-            _L_site5_multichoicePanel1.text = "Welke watergerelateerde verontreinigende stoffen kunnen in het milieu terechtkomen?";
+            _L_site5_multichoicePanel1.text = "Welke watergerelateerde verontreinigende stoffen kunnen in het milieu terechtkomen? (kies 1 of meerdere antwoorden)";
             _P_site5_multichoicePanel1.text = _L_site5_multichoicePanel1.text;
             _L_site5_multichoicePanel2.text = "Plastic";
             _P_site5_multichoicePanel2.text = _L_site5_multichoicePanel2.text;
@@ -680,7 +680,7 @@ public class LanguageChanger : MonoBehaviour
             _L_site1_welcomePanel23.text = "This app was developed was part of ULTIMATE. This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement N° 869318. More on ultimatewater.eu";
             _P_site1_welcomePanel23.text = _L_site1_welcomePanel23.text;
             //multichoice panel
-            _L_site1_multichoicePanel1.text = "Where is drinking water in the Netherlands coming from?";
+            _L_site1_multichoicePanel1.text = "Where is drinking water in the Netherlands coming from? (it is possible more than one answer is correct)";
             _P_site1_multichoicePanel1.text = _L_site1_multichoicePanel1.text;
             _L_site1_multichoicePanel2.text = "Rain water";
             _P_site1_multichoicePanel2.text = _L_site1_multichoicePanel2.text;
@@ -885,7 +885,7 @@ public class LanguageChanger : MonoBehaviour
             _L_site3_infoToMultichoicePanel27.text = "Did you know that you can save water with a few simple water saving practices at home? This can help save on the use and cost of water and energy.";
             _P_site3_infoToMultichoicePanel27.text = _L_site3_infoToMultichoicePanel27.text;
             //multichoice panel 1
-            _L_site3_multichoicePanel11.text = "Select what water saving practices can be used at your home to reduce the use of drinking water.";
+            _L_site3_multichoicePanel11.text = "Select what water saving practices can be used at your home to reduce the use of drinking water. (it is possible more than one answer is correct)";
             _P_site3_multichoicePanel11.text = _L_site3_multichoicePanel11.text;
             _L_site3_multichoicePanel12.text = "Collecting rain water for gardening";
             _P_site3_multichoicePanel12.text = _L_site3_multichoicePanel12.text;
@@ -915,7 +915,7 @@ public class LanguageChanger : MonoBehaviour
             _L_site3_scoreUpdatePanel13.text = "Your current score is:\n" + gameController.GetComponent<gameController>().score.ToString() + " liters.";
             _P_site3_scoreUpdatePanel13.text = _L_site3_scoreUpdatePanel13.text;
             //multichoice panel 2
-            _L_site3_multichoicePanel21.text = "After drinking water is used (e.g., for showering, flushing toilets) it disappears into the sewer. From that moment it is wastewater. What happens with this wastewater?";
+            _L_site3_multichoicePanel21.text = "After drinking water is used (e.g., for showering, flushing toilets) it disappears into the sewer. From that moment it is wastewater. What happens with this wastewater? (it is possible more than one answer is correct)";
             _P_site3_multichoicePanel21.text = _L_site3_multichoicePanel21.text;
             _L_site3_multichoicePanel22.text = "Directly disposed in the environment";
             _P_site3_multichoicePanel22.text = _L_site3_multichoicePanel22.text;
@@ -1002,7 +1002,7 @@ public class LanguageChanger : MonoBehaviour
             _L_site5_welcomePanel2.text = "In the previous challenge, you were told how wastewater can be put back in the environment.  It is important that the wastewater is treated before it is put back in the environment. \n\nThis is done to limit the possibility of water related pollutants entering the environment.";
             _P_site5_welcomePanel2.text = _L_site5_welcomePanel2.text;
             //multichoice panel
-            _L_site5_multichoicePanel1.text = "Select water related pollutants that can enter the environment?";
+            _L_site5_multichoicePanel1.text = "Select water related pollutants that can enter the environment? (it is possible more than one answer is correct)";
             _P_site5_multichoicePanel1.text = _L_site5_multichoicePanel1.text;
             _L_site5_multichoicePanel2.text = "Plastic materials";
             _P_site5_multichoicePanel2.text = _L_site5_multichoicePanel2.text;
